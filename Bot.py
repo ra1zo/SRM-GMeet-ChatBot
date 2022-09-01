@@ -1,4 +1,4 @@
-#author:Samuel Britto
+
 import pyaudio
 import wave
 import os 
@@ -57,17 +57,17 @@ try:
                 print(text)
             os.remove(WAVE_OUTPUT_FILENAME)
             get_text=text.split()
-            #Your Name or Register Number 
+
             target_text=["Samuel","samuel","britto","Britto","register number 64","64","sixty four","sixty for","registor number sixty four"]
-            #Reply Messages
+
             output = ["64 present","Present"]
             choice=random.choice(output)
             for target in get_text:
                 if target in target_text:
                     
                     pyautogui.click(x=632, y=686)
-                    pyautogui.write(choice)#, interval=0.25) 
-                    #remove "#" for slow reply
+                    pyautogui.write(choice) 
+
                     pyautogui.press('enter') 
                     print("")
                     continue
